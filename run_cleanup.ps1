@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 # run_cleanup.ps1 — 日志清理一键运行脚本
 # 双击或右键 "使用 PowerShell 运行" 即可执行
 # 用法:
@@ -35,4 +35,11 @@ Set-Location $WorkDir
 
 Write-Host ""
 Write-Host "按任意键退出..."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+# 非自动化环境等待用户按键; 自动化环境自动跳过(3s)
+if ([Environment]::UserInteractive -and $Host.Name -notlike "*ServerRemoteHost*") {
+    Write-Host "按任意键退出 (3秒后自动退出)..."
+    $timeout = Get-Date).AddSeconds(3)
+    while (-not $Host.UI.RawUI.KeyAvailable -and (Get-Date) -lt $timeout) { Start-Sleep -Milliseconds 100 }
+} else {
+    Start-Sleep -Seconds 1
+}
