@@ -1,0 +1,5 @@
+outs:
+- md5: b9a0001a7bf94fe896d258158397b3bd
+  size: 81348
+  hash: md5
+  path: adj_002090.csv
