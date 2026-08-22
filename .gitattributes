@@ -1,0 +1,4 @@
+# DVC: treat CSV as binary to prevent CRLF conversion that would change DVC content hashes
+*.csv binary
+# General text files use LF for consistency
+* text=auto eol=lf
