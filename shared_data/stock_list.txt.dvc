@@ -1,0 +1,5 @@
+outs:
+- md5: 7a2e88eeaa830fbacb5656f9654b375d
+  size: 56623
+  hash: md5
+  path: stock_list.txt
