@@ -1,0 +1,5 @@
+outs:
+- md5: b6b9de171b395ab1505258d2ddddfc0d
+  size: 1447176627
+  hash: md5
+  path: daily_k_non_adj_backup.csv

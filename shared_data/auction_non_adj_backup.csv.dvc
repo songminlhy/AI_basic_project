@@ -1,0 +1,5 @@
+outs:
+- md5: a4f59c5d4554f28b4836117f4e7f796a
+  size: 17978220184
+  hash: md5
+  path: auction_non_adj_backup.csv
